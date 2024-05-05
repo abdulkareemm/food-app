@@ -3,6 +3,7 @@ import {menu_list} from "../assets/assets"
 import { useTranslation } from 'react-i18next'
 const ExploreMenu = ({ category, setCategory }) => {
   const { t } = useTranslation();
+  
   return (
     <div className="flex flex-col  gap-5 my-20">
       <h1 className="text-gray-500 font-semibold text-4xl">
