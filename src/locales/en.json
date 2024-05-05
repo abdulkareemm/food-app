@@ -6,5 +6,14 @@
   "sign-in": "Sign In",
   "header": "Order your favorite food here",
   "header1" : "Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise .Our mission is to satisfy your cravings and elevate your dining experience , one delicious meal at time.",
-  "header-btn":"View Menu"
+  "header-btn":"View Menu",
+  "explore-header":"Explore our menu",
+  "Salad":"Salad",
+  "Rolls":"Rolls",
+  "Deserts":"Deserts",
+  "Sandwich":"Sandwich",
+  "Cake":"Cake",
+  "Pure Veg":"Pure Veg",
+  "Pasta":"Pasta",
+  "Noodles":"Noodles"
 }
