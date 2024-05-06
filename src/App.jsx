@@ -1,4 +1,4 @@
-import {Nav} from "./components"
+import {Footer, Nav} from "./components"
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 import {Cart, Home, Order} from "./pages"
 
@@ -16,6 +16,7 @@ function App() {
             <Route path="/order" element={<Order />} />
           </Routes>
         </Router>
+        <Footer/>
       </div>
     </>
   );
