@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <div className="w-[80%] m-auto">
+      <div className="md:w-[80%] m-auto">
         <Nav />
         <Router>
           <Routes>

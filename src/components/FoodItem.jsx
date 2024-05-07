@@ -9,7 +9,7 @@ const FoodItem = ({ _id, name, price, description, image }) => {
   return (
     <div className="w-full relative m-auto rounded-md overflow-hidden shadow-md animate-fade min-h-[365px] cursor-pointer hover:bg-slate-100">
       <div className="w-full relative">
-        <img src={image} alt="" />
+        <img src={image} alt="" className="w-full" />
         {!cartItems[_id] ? (
           <img
             src={assets.add_icon_white}
@@ -37,12 +37,12 @@ const FoodItem = ({ _id, name, price, description, image }) => {
       </div>
       <div className="p-5">
         <div className="flex justify-between items-center">
-          <p className="text-lg font-semibold">{t(name)}</p>
-          <img src={assets.rating_starts} alt="" className="w-[70px] " />
+          <p className="text-base md:text-lg font-semibold">{t(name)}</p>
+          <img src={assets.rating_starts} alt="" className="w-[50px] md:[w-70] " />
         </div>
-        <p className="text-gray-600 text-sm mt-2">{t(`${name}-d`)}</p>
-        <div className="absolute bottom-3 ltr:right-4 rtl:left4 bg-gray-200 px-3  rounded-full">
-          <p className="text-red-500 font-semibold text-base">${price}</p>
+        <p className="text-gray-600 text-xs md:text-sm mt-2 w-[90%] ">{t(`${name}-d`)}</p>
+        <div className="absolute bottom-3 ltr:right-4 rtl:left-4 bg-gray-200 px-3 rounded-full">
+          <p className="text-red-500 font-semibold text-sm md:text-base ">${price}</p>
         </div>
       </div>
     </div>

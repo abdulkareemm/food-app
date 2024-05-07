@@ -1,12 +1,12 @@
-import React from 'react'
-import {menu_list} from "../assets/assets"
-import { useTranslation } from 'react-i18next'
+import React from "react";
+import { menu_list } from "../assets/assets";
+import { useTranslation } from "react-i18next";
 const ExploreMenu = ({ category, setCategory }) => {
   const { t } = useTranslation();
-  
+
   return (
-    <div className="flex flex-col  gap-5 my-10">
-      <h1 className="text-gray-500 font-semibold text-4xl">
+    <div className="flex flex-col mx-5  gap-5 mt-10">
+      <h1 className="text-gray-500 font-semibold text-base md:text-4xl">
         {t("explore-header")}
       </h1>
       <div className="flex justify-between items-center gap-7 text-center my-5 mx-0 overflow-scroll">
@@ -22,7 +22,7 @@ const ExploreMenu = ({ category, setCategory }) => {
               }`}
             />
             <p
-              className={`mt-3 text-gray-800 text-[1.4vw] cursor-pointer ${
+              className={`mt-3 text-gray-800 text-[max(1.4vw,12px)]] cursor-pointer ${
                 category === item.menu_name
                   ? "border-2 rounded-full border-red-500 px-0.5 text-red-800 font-semibold"
                   : ""
@@ -38,4 +38,4 @@ const ExploreMenu = ({ category, setCategory }) => {
   );
 };
 
-export default ExploreMenu
+export default ExploreMenu;

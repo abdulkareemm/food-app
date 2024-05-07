@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next";
 const AppDownload = () => {
     const {t} = useTranslation()
   return (
-    <div className="m-auto mt-24 text-[max(3vw,20px)] text-center font-semibold">
-      <p className=" text-gray-600">
-        {t("download-app")} <br />
+    <div className="mx-5  mt-24 text-[max(3vw,20px)] text-start md:text-center font-semibold">
+      <p className=" text-gray-600 text-xl md:text-4xl">
+        {t("download-app")} <br className="hidden md:flex" />
         <span className="font-bold text-red-600">Tomato App</span>
       </p>
       <div className="flex justify-center gap-[max(2vw,10px)] mt-10">
