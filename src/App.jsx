@@ -1,25 +1,24 @@
-import {Footer, Nav} from "./components"
-import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
-import {Cart, Home, Order} from "./pages"
-
+import { Footer, Nav } from "./components";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Cart, Home, Order } from "./pages";
 
 function App() {
-
   return (
-    <>
-      <div className="md:w-[80%] m-auto">
-        <Nav />
+    <div className="relative">
+      <div className="md:w-[80%] m-auto ">
         <Router>
+          <Nav />
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/order" element={<Order />} />
           </Routes>
         </Router>
-        <Footer/>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }
 
-export default App
+export default App;

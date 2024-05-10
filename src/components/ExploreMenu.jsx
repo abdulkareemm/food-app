@@ -5,7 +5,7 @@ const ExploreMenu = ({ category, setCategory }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col mx-5  gap-5 mt-10">
+    <div className="flex flex-col mx-5  gap-5 mt-10" id="menu">
       <h1 className="text-gray-500 font-semibold text-base md:text-4xl">
         {t("explore-header")}
       </h1>

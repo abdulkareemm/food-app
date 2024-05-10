@@ -5,8 +5,11 @@ import { useTranslation } from "react-i18next";
 const Footer = () => {
   const {t} = useTranslation()
   return (
-    <div className="text-[#d9d9d9] bg-[#323232] flex flex-col items-center  mt-10 gap-5  px-[8vw]">
-      <div className="w-full flex flex-col md:flex-row mt-20 md:justify-between gap-5 md:gap-0">
+    <div
+      className="text-[#d9d9d9] bg-[#323232] flex flex-col items-center  mt-10 gap-5  px-[8vw] "
+      id="footer"
+    >
+      <div className="w-full flex flex-col md:flex-row  md:justify-between gap-5 md:gap-0 mt-10">
         <div className="flex flex-col items-start gap-5 w-full  md:w-[40%]">
           <img src={assets.logo} alt="" />
           <p>{t("footer-d")}</p>
