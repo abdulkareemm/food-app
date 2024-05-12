@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useStoreContext } from "../context/Store";
 
 const naves = [
   { name: "home", l: "/" },
@@ -12,6 +13,7 @@ const naves = [
 
 export default function Navbar() {
   const rootHtml = document.getElementById("root-html");
+  const {cartItems}   = useStoreContext()
   const [menu, setMenu] = useState("home");
   const { i18n, t } = useTranslation();
   const changeLanguage = () => {
@@ -58,9 +60,11 @@ export default function Navbar() {
 
         <Link className="relative cursor-pointer" to={"/cart"}>
           <img src={assets.basket_icon} alt="basket" className="w-7" />
-          <div className="absolute bg-red-600 -top-3 ltr:-right-2 rtl:-left-2 px-1 text-sm md:text-base  md:px-2  rounded-full text-slate-200">
-            5
-          </div>
+          {Object.keys(cartItems).length > 0 && (
+            <div className="absolute bg-red-600 -top-3 ltr:-right-2 rtl:-left-2 px-1 text-sm md:text-base  md:px-2  rounded-full text-slate-200">
+              {Object.keys(cartItems).length}
+            </div>
+          )}
         </Link>
         <button
           className="text-gray-700 py-2 px-8 md:px-2 lg:px-10 text-base md:text-sm  lg:text-base  border-2 rounded-3xl border-fuchsia-300 

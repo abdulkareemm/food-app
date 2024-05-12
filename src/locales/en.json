@@ -90,5 +90,11 @@
   "Price":"Price",
   "Quantity":"Quantity",
   "Total":"Total",
-  "Remove":"Remove"
+  "Remove":"Remove",
+  "Cart Totals":"Cart Totals",
+  "Subtotal":"Subtotal",
+  "Deliver Fee":"Deliver Fee",
+  "cart-button":"PROCEED TO CHECKOUT",
+  "promo":"If you have promo code , Enter it here",
+  "submit":"Submit"
 }

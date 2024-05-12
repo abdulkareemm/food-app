@@ -3,10 +3,10 @@ import { useStoreContext } from "../context/Store";
 import { useTranslation } from "react-i18next";
 
 const Cart = () => {
-  const { food_list,cartItems ,removeFromCart} = useStoreContext();
+  const { food_list, cartItems, removeFromCart } = useStoreContext();
   const { t } = useTranslation();
   return (
-    <div className="mt-[100px] overflow-scroll min-h-[29vh]">
+    <div className="mt-[100px] overflow-scroll min-h-[29vh] mx-4 md:mx-0">
       <div className="mx-4  min-w-[600px]">
         <div className="cart-items-title text-gray-600">
           <p className="">{t("Items")}</p>
@@ -40,6 +40,44 @@ const Cart = () => {
             );
           }
         })}
+      </div>
+      <div className="mt-20 flex flex-col lg:flex-row justify-between gap-[max(12vw,20px)]">
+        <div className="lg:flex-1 flex flex-col gap-5">
+          <h2>{t("Cart Totals")}</h2>
+          <div className="">
+            <div className="flex justify-between text-gray-500">
+              <p>{t("Subtotal")}</p>
+              <p>0</p>
+            </div>
+            <hr className="my-3" />
+            <div className="flex justify-between text-gray-500">
+              <p>{t("Deliver Fee")}</p>
+              <p>0</p>
+            </div>
+            <hr className="my-3" />
+            <div className="flex justify-between text-gray-500">
+              <p>{t("Total")}</p>
+              <p>0</p>
+            </div>
+          </div>
+          <button className="text-white bg-red-500 w-[max(15vw,200px)] py-3 rounded-md cursor-pointer">
+            {t("cart-button")}
+          </button>
+        </div>
+        <div className="lg:flex-1">
+          <div>
+            <p className="text-gray-500">{t("promo")}</p>
+            <div className="mt-2 flex justify-between items-center bg-[#eaeaea] rounded-md">
+              <input
+                type="text"
+                className="bg-transparent focus:ring-0 border-none mx-4 py-4"
+              />
+              <button className="w-[max(10vw,150px)] py-4 px-1 bg-black border-none text-white rounded-l-md ltr:rounded-r-md">
+                {t("submit")}
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
