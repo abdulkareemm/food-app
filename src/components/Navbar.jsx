@@ -58,7 +58,7 @@ export default function Navbar() {
           className="hidden md:flex w-7"
         />
 
-        <Link className="relative cursor-pointer" to={"/cart"}>
+        <Link className="relative cursor-pointer" to={"/food-app/cart"}>
           <img src={assets.basket_icon} alt="basket" className="w-7" />
           {Object.keys(cartItems).length > 0 && (
             <div className="absolute bg-red-600 -top-3 ltr:-right-2 rtl:-left-2 px-1 text-sm md:text-base  md:px-2  rounded-full text-slate-200">
