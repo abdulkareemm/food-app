@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from "../context/Store";
 
 const naves = [
-  { name: "home", l: "/" },
+  { name: "home", l: "/food-app/" },
   { name: "menu", l: "#menu" },
   { name: "mobile-app", l: "#mobile-app" },
-  { name: "contact us" , l:"#footer" },
+  { name: "contact us", l: "#footer" },
 ];
 
 export default function Navbar() {
@@ -27,7 +27,7 @@ export default function Navbar() {
   };
   return (
     <header className="px-5 py-4 flex justify-between items-center">
-      <Link to={"/"}>
+      <Link to={"/food-app/"}>
         <img src={assets.logo} alt="logo" className="w-28  md:w-[150px]  " />
       </Link>
       <ul className="hidden text-sm lg:text-base md:flex gap-2 lg:gap-5 text-gray-700">
